@@ -1,7 +1,7 @@
 class RocksController < ApplicationController
 
   def index
-    @uploader = ImageUploader.new
+    # @uploader = ImageUploader.new
   end
 
 end
