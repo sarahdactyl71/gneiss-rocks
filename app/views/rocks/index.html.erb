@@ -1,4 +1,15 @@
 <h1>Gneiss Rocks</h1>
 
-<!-- <%= @uploader %> -->
+<% @rocks.each do |rock| %>
+  <div class="">
+    <%= rock.location_found %>
+  </div>
+  <div class="">
+    <%= rock.description %>
+  </div>
+  <div class="">
+    <%= rock.image %>
+  </div>
+<% end %>
+
 <%= link_to "New Rock", new_rock_path %>
