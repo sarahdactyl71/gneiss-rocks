@@ -13,7 +13,8 @@ class GoogleVisionService
                         },
                         "features": [
                           {
-                            "type": "LABEL_DETECTION"
+                            "type":"LABEL_DETECTION",
+                            "maxResults":10
                           }
                         ]
                       }

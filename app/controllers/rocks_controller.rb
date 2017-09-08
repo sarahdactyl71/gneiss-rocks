@@ -2,7 +2,6 @@ class RocksController < ApplicationController
 
   def index
     @rocks = Rock.all
-    # @rock = Rock.create!(rock_params).encode_base_six_four(@rock.image)
   end
 
   def new
@@ -11,6 +10,7 @@ class RocksController < ApplicationController
 
   def create
     @rock = Rock.create!(rock_params)
+    # @rock = Rock.create!(rock_params).encode_base_six_four(@rock.image)
 
     if @rock.save
       flash[:notice] = "Rock has been successfully created!"
