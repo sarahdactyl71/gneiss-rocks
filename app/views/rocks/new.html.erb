@@ -1,1 +1,8 @@
 <h1>Create a Rock</h1>
+
+
+<%= form_for @rock, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  Where rock was found: <%= f.text_field :location_found %>
+  Rock description: <%= f.text_area :description%>
+  <%= f.submit "Create Rock" %>
+<% end %>
