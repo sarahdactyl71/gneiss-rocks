@@ -1,7 +1,24 @@
 class RocksController < ApplicationController
 
   def index
-    # @uploader = ImageUploader.new
+    @rocks = Rock.all
   end
 
+  def new
+    @rock = Rock.new
+  end
+
+  def create
+    @rock = Rock.create(rock_params)
+
+    if @rock.save
+      flash[:notice] = "Rock has been successfully created!"
+    end
+  end
+
+  private
+
+  def rock_params
+    params.require(:rock).permit(:location_found, :description, :image)
+  end
 end
