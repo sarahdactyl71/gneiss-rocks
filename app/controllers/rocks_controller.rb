@@ -2,7 +2,7 @@ class RocksController < ApplicationController
 
   def index
     # @rocks = Rock.all
-    @rock = 
+    @rock = Rock.encode_base_six_four
   end
 
   def new

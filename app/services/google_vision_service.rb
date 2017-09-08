@@ -18,6 +18,9 @@ class GoogleVisionService
                       }
                     ]
                   }'
+      req.adapter  Faraday.default_adapter
   end
+
+
 
 end
