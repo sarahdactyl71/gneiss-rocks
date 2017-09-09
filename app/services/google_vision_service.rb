@@ -23,6 +23,23 @@ class GoogleVisionService
       req.adapter  Faraday.default_adapter
   end
 
+  # project_id = "Your Google Cloud project ID"
+  # image_path = "Path to local image file, eg. './image.png'"
+
+  # require "google/cloud/vision"
+  #
+  # vision = Google::Cloud::Vision.new project: project_id
+  # image  = vision.image image_path
+  #
+  # web = image.web
+  #
+  # web.entities.each do |entity|
+  #   puts entity.description
+  # end
+  #
+  # web.full_matching_images.each do |image|
+  #   puts image.url
+  # end
 
 
 end
