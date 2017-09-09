@@ -386,7 +386,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   listen (>= 3.0.5, < 3.2)
-  paperclip (~> 4.1)
+  paperclip (~> 4.2)
   pg (~> 0.18)
   pry
   puma (~> 3.7)

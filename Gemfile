@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'google-cloud'
-gem "paperclip", "~> 4.1"
+gem "paperclip", "~> 4.2"
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'sprockets-rails'
 gem 'jquery-rails'
