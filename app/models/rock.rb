@@ -1,2 +1,4 @@
 class Rock < ApplicationRecord
+
+  
 end
