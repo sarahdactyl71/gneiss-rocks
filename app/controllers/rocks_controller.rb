@@ -12,7 +12,6 @@ class RocksController < ApplicationController
 
   def create
     @rock = Rock.create!(rock_params)
-    # @rock = Rock.create!(rock_params).encode_base_six_four(@rock.image)
 
     if @rock.save
       encoded_image = Base64.encode64(@rock.image)
@@ -27,6 +26,6 @@ class RocksController < ApplicationController
   private
 
   def rock_params
-    params.require(:rock).permit(:location_found, :description, :image)
+    params.require(:rock).permit(:location_found, :description, :image, :image_file_name)
   end
 end
