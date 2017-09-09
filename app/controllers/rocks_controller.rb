@@ -26,6 +26,6 @@ class RocksController < ApplicationController
   private
 
   def rock_params
-    params.require(:rock).permit(:location_found, :description, :image, :image_file_name)
+    params.require(:rock).permit(:location_found, :description, :image, :image_file_name, :image_file_size, :image_content_type, :image_updated_at)
   end
 end
