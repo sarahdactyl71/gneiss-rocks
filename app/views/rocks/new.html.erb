@@ -1,7 +1,7 @@
-<h1>Create a Rock</h1>
+<h1>Upload a Rock</h1>
 
 
-<%= form_for @rock, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+<!-- <%= form_for @rock, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
   <div class="field">
     <%= f.label :location_found %><br>
     <%= f.text_field :location_found %>
@@ -17,4 +17,25 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %> -->
+
+<%= form_for @rock do |f| %>
+  <%= render 'shared/errors', object: @rock %>
+
+  <div class="form-group">
+    <%= f.label :location_found %>
+    <%= f.text_field :location_found, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: 'form-control'%>
+  </div>
+
+  <%= f.submit 'Create Rock', class: 'btn btn-primary' %>
 <% end %>
