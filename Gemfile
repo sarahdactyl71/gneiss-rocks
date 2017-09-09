@@ -23,8 +23,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-gem 'carrierwave', '~> 1.0'
 gem 'google-cloud'
+gem "paperclip", "~> 4.2"
+gem 'bootstrap', '~> 4.0.0.beta'
+gem 'sprockets-rails'
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
