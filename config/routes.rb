@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'rocks#index'
 
-  resources :rocks, only: [:index, :new, :create]
+  resources :rocks, only: [:index, :new, :create, :show]
 end
