@@ -5,6 +5,16 @@ My background is in Geology/Geophysics. I have lurked around many a corner hopin
 
 Sadly, it is not always the case for one to have the friendly neightborhood geologist to turn to for information. For the untrained eye, it is difficult to recognize and identify rocks in the field. I wanted to make a rock identifier app so that the average student, rock enthusiast, or nature lover could learn more about our Earth's history.
 
+## Requirements
+
+For development, you will only need quite a few things to get going.
+
+-Rails 5.1.3
+-Ruby 2.4.1
+-Python 2.7x
+-Google SDK
+
+
 Things you may want to cover:
 
 * Ruby version
