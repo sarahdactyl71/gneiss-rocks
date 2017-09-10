@@ -2,7 +2,8 @@ require 'rails-helper'
 
 RSpec.describe "a user can navigate to rock show page" do
   it "they can see labels about the rock image" do
-
+    visit root_path
+    
   end
 end
 

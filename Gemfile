@@ -28,6 +28,7 @@ gem "paperclip", "~> 4.2"
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'sprockets-rails'
 gem 'jquery-rails'
+gem 'faker'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
