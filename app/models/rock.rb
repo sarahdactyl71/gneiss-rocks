@@ -14,7 +14,7 @@ class Rock < ApplicationRecord
     vision = Google::Cloud::Vision.new project: project_id
 
     # The name of the image file to annotate
-    file_name = "/system/rocks/images/000/000/001/original/other_rock.JPG?1504986718"
+    file_name = "/Users/sarahkirk/turing/4module/gneiss-rocks/public/system/rocks/images/000/000/001/original/other_rock.JPG"
 
     # Performs label detection on the image file
     labels = vision.image(file_name).labels
