@@ -6,6 +6,10 @@ RSpec.describe "a user can navigate to rock show page" do
     click_on "What Is This Rock?"
 
     expect(current_path).to eq(rock_path(rock.id))
+    within(:css, "div#rock-labels") do
+      expect(page).to have_selector('li', count: 5)
+    end
+    expect(page).to have_content("Rock")
   end
 end
 
