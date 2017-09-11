@@ -21,6 +21,10 @@ class RocksController < ApplicationController
     end
   end
 
+  def show
+    @rock = Rock.find(params[:id])
+  end
+
   private
 
   def rock_params
