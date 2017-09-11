@@ -25,9 +25,9 @@ class Rock < ApplicationRecord
     end
   end
 
-  def web_detection
+  def web_detection(image_path)
     project_id = "gneiss-rocks"
-    image_path = "/Users/sarahkirk/turing/4module/gneiss-rocks/public/system/rocks/images/000/000/001/original/other_rock.JPG"
+    # image_path = "/Users/sarahkirk/turing/4module/gneiss-rocks/public/system/rocks/images/000/000/001/original/other_rock.JPG"
 
     require "google/cloud/vision"
 

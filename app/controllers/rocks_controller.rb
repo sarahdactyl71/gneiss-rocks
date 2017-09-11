@@ -22,7 +22,9 @@ class RocksController < ApplicationController
   end
 
   def show
-    @rock = Rock.find(params[:id]).web_detection
+    @rock = Rock.find(params[:id])
+    image_path = @rock.image.path
+    @web_info = @rock.web_detection(image_path)
   end
 
   private
