@@ -5,7 +5,7 @@ RSpec.describe "a user can create a rock" do
     visit new_rock_path
     fill_in 'Location found', with: "Boulder, CO"
     fill_in 'Description', with: "Conglomerate"
-    attach_file("Choose File", Rails.root + "spec/fixtures/rock.jpg")
+    attach_file("Image", Rails.root + "spec/fixtures/rock.jpg")
     click_on "Create Rock"
     expect(current_path).to eq(root_path)
     expect(page).to have_content("Boulder, CO")
