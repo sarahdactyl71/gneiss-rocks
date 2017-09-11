@@ -2,9 +2,11 @@ require 'rails_helper'
 
 RSpec.describe "a user can navigate to rock show page" do
   it "they can see labels about the rock image" do
-    rock = create(:rock)
-
-    visit root_path
+    visit new_rock_path
+    fill_in 'Location found', with: "Boulder, CO"
+    fill_in 'Description', with: "Conglomerate"
+    attach_file("Image", Rails.root + "spec/fixtures/rock.jpg")
+    click_on "Create Rock"
     click_on "What Is This Rock?"
 
     expect(current_path).to eq(rock_path(rock.id))
