@@ -15,6 +15,21 @@ RSpec.describe "a user can navigate to rock show page" do
     end
     expect(page).to have_content("Rock")
   end
+
+  it "they can see web detection about rock image" do
+    visit new_rock_path
+    fill_in 'Location found', with: "Boulder, CO"
+    fill_in 'Description', with: "Conglomerate"
+    attach_file("Image", Rails.root + "spec/fixtures/rock.jpg")
+    click_on "Create Rock"
+    click_on "What Is This Rock?"
+
+    expect(current_path).to eq(rock_path(Rock.first.id))
+    within(:css, "div#web_detection") do
+      expect(page).to have_selector('li', count: 30)
+    end
+    expect(page).to have_content("Rock")
+  end
 end
 
 # As a user

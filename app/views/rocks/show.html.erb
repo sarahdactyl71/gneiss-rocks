@@ -9,12 +9,14 @@
 
 <h2>Web Detection</h2>
 
-<% @web_info.each do |info| %>
-  <ul>
-    <li> Score: <%= info.score %> </li>
-    <li> Description: <%= info.description %> </li>
-  </ul>
-<% end %>
+<div id="web_detection">
+  <% @web_info.each do |info| %>
+    <ul>
+      <li> Score: <%= info.score %> </li>
+      <li> Description: <%= info.description %> </li>
+    </ul>
+  <% end %>
+</div>
 
 <h2>Label Detection</h2>
 
