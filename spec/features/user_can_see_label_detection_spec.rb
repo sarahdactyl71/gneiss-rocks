@@ -1,9 +1,9 @@
-require 'rails-helper'
+require 'rails_helper'
 
 RSpec.describe "a user can navigate to rock show page" do
   it "they can see labels about the rock image" do
     rock = create(:rock)
-    
+
     visit root_path
     click_on "What Is This Rock?"
 

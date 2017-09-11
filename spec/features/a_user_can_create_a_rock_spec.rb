@@ -1,4 +1,4 @@
-require 'rails-helper'
+require 'rails_helper'
 
 RSpec.describe "a user can create a rock" do
   it "sees all the attributes a rock has" do
