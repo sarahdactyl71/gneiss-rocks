@@ -18,9 +18,11 @@
 
 <h2>Label Detection</h2>
 
-<% @label_info.each do |label| %>
-  <ul>
-    <li> Score: <%= label.score %> </li>
-    <li> Description: <%= label.description %> </li>
-  </ul>
-<% end %>
+<div id="rock-labels">
+  <% @label_info.each do |label| %>
+    <ul>
+      <li> Score: <%= label.score %> </li>
+      <li> Description: <%= label.description %> </li>
+    </ul>
+  <% end %>
+</div>

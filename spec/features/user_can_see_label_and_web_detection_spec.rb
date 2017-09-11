@@ -9,9 +9,9 @@ RSpec.describe "a user can navigate to rock show page" do
     click_on "Create Rock"
     click_on "What Is This Rock?"
 
-    expect(current_path).to eq(rock_path(rock.id))
+    expect(current_path).to eq(rock_path(Rock.first.id))
     within(:css, "div#rock-labels") do
-      expect(page).to have_selector('li', count: 5)
+      expect(page).to have_selector('li', count: 8)
     end
     expect(page).to have_content("Rock")
   end
