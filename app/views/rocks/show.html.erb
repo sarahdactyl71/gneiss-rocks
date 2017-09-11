@@ -3,9 +3,20 @@
 <%= @rock.location_found %>
 <%= @rock.description %>
 
+<h2>Web Detection</h2>
+
 <% @web_info.each do |info| %>
   <ul>
     <li> Score: <%= info.score %> </li>
     <li> Description: <%= info.description %> </li>
+  </ul>
+<% end %>
+
+<h2>Label Detection</h2>
+
+<% @label_info.each do |label| %>
+  <ul>
+    <li> Score: <%= label.score %> </li>
+    <li> Description: <%= label.description %> </li>
   </ul>
 <% end %>

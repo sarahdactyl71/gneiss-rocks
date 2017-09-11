@@ -23,6 +23,7 @@ class RocksController < ApplicationController
     @rock = Rock.find(params[:id])
     image_path = @rock.image.path
     @web_info = @rock.web_detection(image_path)
+    @label_info = @rock.detect_labels(image_path)
   end
 
   private
