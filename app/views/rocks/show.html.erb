@@ -1,4 +1,11 @@
 <h1>Potentially Accurate Information About This Rock</h1>
 
-<%= @rock %>
-<%= @web_info %>
+<%= @rock.location_found %>
+<%= @rock.description %>
+
+<% @web_info.each do |info| %>
+  <ul>
+    <li> Score: <%= info.score %> </li>
+    <li> Description: <%= info.description %> </li>
+  </ul>
+<% end %>
