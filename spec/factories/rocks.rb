@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :rock do
-    location_found "MyString"
-    description "MyText"
+    location_found Faker::Zelda.location
+    description Faker::Hipster.paragraph
+    image_file_name "other_rock.JPG"
   end
 end
