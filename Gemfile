@@ -46,7 +46,7 @@ group :development, :test do
   gem "vcr"
   gem "webmock"
   gem "pry"
-
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
@@ -55,7 +55,6 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem "figaro"
   gem "faraday"
-  gem "factory_girl_rails", "~> 4.0"
   gem 'active_model_serializers', '~> 0.10.0'
 
 end
