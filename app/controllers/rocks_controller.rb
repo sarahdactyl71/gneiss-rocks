@@ -9,7 +9,7 @@ class RocksController < ApplicationController
   end
 
   def create
-    @rock = Rock.create!(rock_params)
+    @rock = Rock.new(rock_params)
 
     if @rock.save
       flash[:success] = "Rock has been successfully created!"
