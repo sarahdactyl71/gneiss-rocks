@@ -7,6 +7,7 @@ class Rock < ApplicationRecord
 
   validates_presence_of :location_found
   validates_presence_of :description
+  validates_presence_of :image
 
   validates_attachment :image,
                      content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
