@@ -34,8 +34,21 @@ describe "Rocks API" do
       get "/api/v1/rocks/0"
 
       json = JSON.parse(response.body)
-      
+
       expect(response.status).to eq(404)
+    end
+  end
+
+  describe '#create' do
+    it "creates a rock" do
+      rock = create(:rock)
+      post '/api/v1/rocks', {location_found: rock.location_found, description: rock.description, image: rock.image}
+
+      json = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(Rock.last.location_found).to eq(rock.location_found)
+      expect(Rock.last.description).to eq(rock.description)
     end
   end
 
