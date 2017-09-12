@@ -42,7 +42,7 @@ describe "Rocks API" do
   describe '#create' do
     it "creates a rock" do
       rock = create(:rock)
-      post '/api/v1/rocks', params: {rock: {location_found: rock.location_found, description: rock.description, image: rock.image}}
+      post '/api/v1/rocks', params: {rock: {location_found: rock.location_found, description: rock.description, image: rock.image.path}}
 
       json = JSON.parse(response.body)
 
