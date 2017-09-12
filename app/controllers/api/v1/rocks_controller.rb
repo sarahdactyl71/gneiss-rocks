@@ -23,6 +23,16 @@ class Api::V1::RocksController < ApplicationController
     end
   end
 
+  def update
+    rock = Rock.find(params[:id])
+
+    if rock.update(rock_params)
+      render json: rock
+    else
+      render json: rock.errors, status: 400
+    end
+  end
+
   private
 
   def rock_params
