@@ -50,6 +50,15 @@ describe "Rocks API" do
       expect(Rock.last.location_found).to eq(rock.location_found)
       expect(Rock.last.description).to eq(rock.description)
     end
+
+    it "will not create a rock with a missing field" do
+      rock = create(:rock)
+      post '/api/v1/rocks', params: {rock: {location_found: rock.location_found}}
+
+      json = JSON.parse(response.body)
+
+      expect(response.status).to eq(400)
+    end
   end
 
 
