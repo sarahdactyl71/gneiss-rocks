@@ -9,13 +9,14 @@ class RocksController < ApplicationController
   end
 
   def create
-    @rock = Rock.create!(rock_params)
+    @rock = Rock.new(rock_params)
 
     if @rock.save
       flash[:success] = "Rock has been successfully created!"
       redirect_to root_path
     else
-      render 'new'
+      flash[:error] = "Missing required fields"
+      redirect_to new_rock_path
     end
   end
 
