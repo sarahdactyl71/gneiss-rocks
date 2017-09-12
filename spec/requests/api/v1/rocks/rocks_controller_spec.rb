@@ -61,5 +61,18 @@ describe "Rocks API" do
     end
   end
 
+  describe '#update' do
+    it "updates a rock" do
+      rock = create(:rock)
+      patch "/api/v1/rocks/#{rock.id}", params: {rock: {location_found: "Oregon", description: "There are trees", image: rock.image.path}}
+        find_rock = Rock.find(rock.id)
+
+        json = JSON.parse(response.body)
+        expect(response).to be_success
+        expect(find_rock.location_found).to eq("Oregon")
+        expect(find_rock.description).to eq("There are trees")
+    end
+  end
+
 
 end
