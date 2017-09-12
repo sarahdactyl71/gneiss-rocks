@@ -29,6 +29,14 @@ describe "Rocks API" do
       expect(json["location_found"]).to eq(rock.location_found)
       expect(json["description"]).to eq(rock.description)
     end
+
+    it "returns an error if there is no id" do
+      get "/api/v1/rocks/0"
+
+      json = JSON.parse(response.body)
+      
+      expect(response.status).to eq(404)
+    end
   end
 
 

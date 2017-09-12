@@ -5,7 +5,7 @@ class Api::V1::RocksController < ApplicationController
   end
 
   def show
-    rock = Rock.find(params[:id])
+    rock = Rock.find_by(id: params[:id])
     if rock
       render json: rock
     else
