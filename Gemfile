@@ -23,6 +23,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'google-cloud'
+gem "paperclip", "~> 4.2"
+gem 'bootstrap', '~> 4.0.0.beta'
+gem 'sprockets-rails'
+gem 'jquery-rails'
+gem 'faker'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -40,7 +46,8 @@ group :development, :test do
   gem "vcr"
   gem "webmock"
   gem "pry"
-
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'simplecov', :require => false, :group => :test
 end
 
 group :development do
@@ -49,7 +56,6 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem "figaro"
   gem "faraday"
-  gem "factory_girl_rails", "~> 4.0"
   gem 'active_model_serializers', '~> 0.10.0'
 
 end
