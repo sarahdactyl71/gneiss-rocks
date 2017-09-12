@@ -1,22 +1,35 @@
 require 'rails_helper'
 
 describe "Rocks API" do
-  it "returns all the rocks in the database" do
-    rocks = create_list(:rock, 3)
 
-    get "/api/v1/rocks"
+  describe "#index" do
+    it "returns all the rocks in the database" do
+      rocks = create_list(:rock, 3)
 
-    JSON.parse(response.body)
+      get "/api/v1/rocks"
 
-    expect(response).to be_success
+      json = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(json.length).to eq(3)
+    end
   end
 
-  it "shows a single rock" do
-    rocks = create_list(:rock, 3)
-    rock = rocks.first
+  describe '#show' do
+    it "shows a single rock" do
+      rocks = create_list(:rock, 3)
+      rock = rocks.first
 
-    get "/api/v1/rocks/#{rock.id}"
+      get "/api/v1/rocks/#{rock.id}"
 
-    expect(response).to be_success
+      json = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(json["id"]).to eq(rock.id)
+      expect(json["location_found"]).to eq(rock.location_found)
+      expect(json["description"]).to eq(rock.description)
+    end
   end
+
+
 end
