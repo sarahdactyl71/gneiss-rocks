@@ -64,13 +64,21 @@ describe "Rocks API" do
   describe '#update' do
     it "updates a rock" do
       rock = create(:rock)
-      patch "/api/v1/rocks/#{rock.id}", params: {rock: {location_found: "Oregon", description: "There are trees", image: rock.image.path}}
+      patch "/api/v1/rocks/#{rock.id}", params: {rock: {location_found: "Oregon", description: "There are trees"}}
         find_rock = Rock.find(rock.id)
 
         json = JSON.parse(response.body)
         expect(response).to be_success
         expect(find_rock.location_found).to eq("Oregon")
         expect(find_rock.description).to eq("There are trees")
+    end
+
+    it "will not update the rock without the right attributes" do
+      rock = create(:rock)
+      patch "/api/v1/rocks/#{rock.id}", params: {rock: {location_found: ""}}
+
+      json = JSON.parse(response.body)
+      expect(response.status).to eq(400)
     end
   end
 
