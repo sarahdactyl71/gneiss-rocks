@@ -82,5 +82,17 @@ describe "Rocks API" do
     end
   end
 
+  describe '#destroy' do
+    it "will delete a rock upon request" do
+      rock = create(:rock)
+      delete "/api/v1/rocks/#{rock.id}"
+
+      expect(response.status).to eq(204)
+      expect(response.body).to eq("")
+
+      find_rock = Rock.find_by(id: rock.id)
+      expect(find_rock).to be_nil
+    end
+  end
 
 end
