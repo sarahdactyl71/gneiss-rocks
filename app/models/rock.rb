@@ -5,6 +5,10 @@ class Rock < ApplicationRecord
                     :small  => "150x150>",
                     :medium => "500x500" }
 
+  validates :location_found, presence: true
+  validates :description, presence: true
+
+
   validates_attachment :image,
                      content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
 
