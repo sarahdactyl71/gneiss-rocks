@@ -1,4 +1,4 @@
-class Api::V1::RockController < ApplicationController
+class Api::V1::RocksController < ApplicationController
 
   def index
     render json: Rock.all

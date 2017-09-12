@@ -15,7 +15,7 @@ describe "Rocks API" do
     rocks = create_list(:rock, 3)
     rock = rocks.first
 
-    get "/api/v1/items/#{rock.id}"
+    get "/api/v1/rocks/#{rock.id}"
 
     expect(response).to be_success
   end
