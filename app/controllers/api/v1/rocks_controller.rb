@@ -33,6 +33,16 @@ class Api::V1::RocksController < ApplicationController
     end
   end
 
+  def destroy
+    rock = Rock.find(params[:id])
+    if rock
+      rock.destroy
+      render json: {}, status: :no_content
+    else
+      render json: { "Error": "Can't find specified rock to delete" }, status: 404
+    end
+  end
+
   private
 
   def rock_params
