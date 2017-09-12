@@ -34,8 +34,7 @@ Please note this is assuming everything was installed and set up properly with G
 
 * Database initialization
 
-* How to run the test suite
-
+## Testing 
   `rspec`
 
   If you would like to see the test coverage run all the tests and then paste
