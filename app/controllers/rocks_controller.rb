@@ -15,7 +15,8 @@ class RocksController < ApplicationController
       flash[:success] = "Rock has been successfully created!"
       redirect_to root_path
     else
-      render 'new'
+      flash[:error] = "Missing required fields"
+      redirect_to new_rock_path
     end
   end
 
