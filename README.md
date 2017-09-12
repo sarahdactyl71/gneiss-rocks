@@ -24,7 +24,7 @@ $ git clone git@github.com:sarahdactyl71/gneiss-rocks.git
 $ cd gneiss-rocks
 $ bundle install
 
-Please note this is assuming everything was installed and set up properly with Google SDK. 
+Please note this is assuming everything was installed and set up properly with Google SDK.
 
 * System dependencies
 
@@ -36,7 +36,13 @@ Please note this is assuming everything was installed and set up properly with G
 
 * How to run the test suite
 
-`rspec`
+  `rspec`
+
+  If you would like to see the test coverage run all the tests and then paste
+
+  `open coverage/index.html`
+
+  into your terminal. This should open a file in your browser with and in depth look at what the tests are covering.
 
 * Services (job queues, cache servers, search engines, etc.)
 
