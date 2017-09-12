@@ -5,6 +5,12 @@ class Api::V1::RocksController < ApplicationController
   end
 
   def show
-    render json: Rock.find(params[:id])
+    rock = Rock.find_by(id: params[:id])
+    if rock
+      render json: rock
+    else
+      render json: {"Error": "Item not found"}, status: 404
+    end
   end
+
 end
