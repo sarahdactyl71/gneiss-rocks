@@ -11,4 +11,4 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 # vision_api_key : AIzaSyALftPdGGJLIcS1brbBxseL0DUYioDh5uU
 vision_api_key : 17debb6c153a90472ab032b1e3fe21fc076a3b99
-GOOGLE_APPLICATION_CREDENTIALS : "/Users/sarahkirk/turing/4module/gneiss-rocks/google_creds.env"
+GOOGLE_APPLICATION_CREDENTIALS : "/Users/sarahkirk/turing/4module/gneiss-rocks/config/gneiss_rocks_credentials.json"
