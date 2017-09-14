@@ -29,6 +29,7 @@ gem 'bootstrap', '~> 4.0.0.beta'
 gem 'sprockets-rails'
 gem 'jquery-rails'
 gem 'faker'
+gem 'aws-sdk', '~> 3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
