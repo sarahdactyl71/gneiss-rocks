@@ -22,7 +22,6 @@ class Rock < ApplicationRecord
     project_id = "gneiss-rocks"
     bucket_name = "gneiss-rocks"
     local_file_path   = image_path
-    # storage_file_path = "rock_images"
     storage_file_path = nil
 
     require "google/cloud/storage"
