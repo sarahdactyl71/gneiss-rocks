@@ -12,6 +12,30 @@ class Rock < ApplicationRecord
   validates_attachment :image,
                      content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
 
+
+
+  def upload_file(image_path)
+
+    # project_id:, bucket_name:, local_file_path:,
+    #               storage_file_path: nil
+    # [START upload_file]
+    project_id = "gneiss-rocks"
+    bucket_name = "gneiss-rocks"
+    local_file_path   = image_path
+    # storage_file_path = "rock_images"
+    storage_file_path = nil
+
+    require "google/cloud/storage"
+
+    storage = Google::Cloud::Storage.new project: project_id
+    bucket  = storage.bucket bucket_name
+
+    file = bucket.create_file local_file_path, storage_file_path
+
+    puts "Uploaded #{file.name}"
+    # [END upload_file]
+  end
+
   def detect_labels(image_path)
     project_id = "gneiss-rocks"
 
