@@ -12,3 +12,7 @@
 # vision_api_key : AIzaSyALftPdGGJLIcS1brbBxseL0DUYioDh5uU
 vision_api_key : 17debb6c153a90472ab032b1e3fe21fc076a3b99
 GOOGLE_APPLICATION_CREDENTIALS : "/Users/sarahkirk/turing/4module/gneiss-rocks/config/gneiss_rocks_credentials.json"
+bucket_name: "gneiss-rocks"
+access_key: 'AKIAJWNXNE5HQUNFRTCA'
+secret_key: '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'
+region: 'us-east-2'
