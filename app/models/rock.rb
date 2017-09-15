@@ -15,10 +15,6 @@ class Rock < ApplicationRecord
 
 
   def upload_file(image_path)
-
-    # project_id:, bucket_name:, local_file_path:,
-    #               storage_file_path: nil
-    # [START upload_file]
     project_id = "gneiss-rocks"
     bucket_name = "gneiss-rocks"
     local_file_path   = image_path
@@ -35,7 +31,6 @@ class Rock < ApplicationRecord
 
     puts "#{file.name} is publicly accessible at #{file.public_url}"
 
-    # [END upload_file]
   end
 
   def detect_labels(image_path)
