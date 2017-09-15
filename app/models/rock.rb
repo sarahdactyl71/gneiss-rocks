@@ -1,3 +1,5 @@
+require "google/cloud/vision"
+
 class Rock < ApplicationRecord
   has_attached_file :image,
                     styles: {
@@ -12,10 +14,29 @@ class Rock < ApplicationRecord
   validates_attachment :image,
                      content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
 
+
+
+  def upload_file(image_path, rock)
+    project_id = "gneiss-rocks"
+    bucket_name = "gneiss-rocks"
+    local_file_path   = image_path
+    storage_file_path = nil
+
+    require "google/cloud/storage"
+
+    storage = Google::Cloud::Storage.new project: project_id
+    bucket  = storage.bucket bucket_name
+
+    file = bucket.create_file local_file_path, storage_file_path
+
+    file.acl.public!
+
+    puts "#{file.name} is publicly accessible at #{file.public_url}"
+    rock.update(public_url: file.public_url)
+  end
+
   def detect_labels(image_path)
     project_id = "gneiss-rocks"
-
-    require "google/cloud/vision"
 
     vision = Google::Cloud::Vision.new project: project_id
 
@@ -29,8 +50,6 @@ class Rock < ApplicationRecord
 
   def web_detection(image_path)
     project_id = "gneiss-rocks"
-
-    require "google/cloud/vision"
 
     vision = Google::Cloud::Vision.new project: project_id
     image  = vision.image image_path
