@@ -22,6 +22,8 @@ class Rock < ApplicationRecord
     local_file_path   = image_path
     storage_file_path = nil
 
+    require "google/cloud/storage"
+
     storage = Google::Cloud::Storage.new project: project_id
     bucket  = storage.bucket bucket_name
 
@@ -48,8 +50,6 @@ class Rock < ApplicationRecord
 
   def web_detection(image_path)
     project_id = "gneiss-rocks"
-
-    require "google/cloud/vision"
 
     vision = Google::Cloud::Vision.new project: project_id
     image  = vision.image image_path
