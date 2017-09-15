@@ -31,7 +31,10 @@ class Rock < ApplicationRecord
 
     file = bucket.create_file local_file_path, storage_file_path
 
-    puts "Uploaded #{file.name}"
+    file.acl.public!
+
+    puts "#{file.name} is publicly accessible at #{file.public_url}"
+
     # [END upload_file]
   end
 
