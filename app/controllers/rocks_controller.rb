@@ -12,7 +12,7 @@ class RocksController < ApplicationController
     @rock = Rock.new(rock_params)
 
     if @rock.save
-      @rock.upload_file(@rock.image.path)
+      @rock.upload_file(@rock.image.path, @rock)
       flash[:success] = "Rock has been successfully created!"
       redirect_to root_path
     else

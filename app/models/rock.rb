@@ -14,7 +14,7 @@ class Rock < ApplicationRecord
 
 
 
-  def upload_file(image_path)
+  def upload_file(image_path, rock)
     project_id = "gneiss-rocks"
     bucket_name = "gneiss-rocks"
     local_file_path   = image_path
@@ -30,7 +30,7 @@ class Rock < ApplicationRecord
     file.acl.public!
 
     puts "#{file.name} is publicly accessible at #{file.public_url}"
-
+    rock.update(public_url: file.public_url)
   end
 
   def detect_labels(image_path)
