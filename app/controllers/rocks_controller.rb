@@ -12,6 +12,7 @@ class RocksController < ApplicationController
     @rock = Rock.new(rock_params)
 
     if @rock.save
+      @rock.upload_file(@rock.image.path, @rock)
       flash[:success] = "Rock has been successfully created!"
       redirect_to root_path
     else
@@ -22,7 +23,8 @@ class RocksController < ApplicationController
 
   def show
     @rock = Rock.find(params[:id])
-    image_path = @rock.image.path
+    # image_path = @rock.image.path
+    image_path = @rock.public_url
     @web_info = @rock.web_detection(image_path)
     @label_info = @rock.detect_labels(image_path)
   end
