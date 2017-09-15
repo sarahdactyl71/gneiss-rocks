@@ -1,7 +1,6 @@
 require "google/cloud/vision"
 require 'googleauth'
 
-# Get the environment configured authorization
 scopes =  ['https://www.googleapis.com/auth/cloud-platform',
            'https://www.googleapis.com/auth/compute']
 authorization = Google::Auth.get_application_default(scopes)
