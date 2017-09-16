@@ -369,8 +369,6 @@
       ],
       "/Users/sarahkirk/turing/4module/gneiss-rocks/app/models/rock.rb": [
         1,
-        null,
-        1,
         1,
         null,
         null,
@@ -379,6 +377,13 @@
         null,
         1,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
         1,
         null,
         1,
@@ -414,7 +419,7 @@
         null,
         3,
         3,
-        22,
+        15,
         null,
         null,
         null,
@@ -677,6 +682,6 @@
         null
       ]
     },
-    "timestamp": 1505448875
+    "timestamp": 1505598939
   }
 }
