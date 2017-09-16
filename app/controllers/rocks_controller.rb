@@ -23,7 +23,6 @@ class RocksController < ApplicationController
 
   def show
     @rock = Rock.find(params[:id])
-    # image_path = @rock.image.path
     image_path = @rock.public_url
     @web_info = @rock.web_detection(image_path)
     @label_info = @rock.detect_labels(image_path)
