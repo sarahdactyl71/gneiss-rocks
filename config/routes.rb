@@ -12,5 +12,5 @@ Rails.application.routes.draw do
       end
     end
 
-  resources :rocks, only: [:index, :new, :create, :show]
+  resources :rocks, only: [:index, :new, :create, :show, :destroy]
 end
