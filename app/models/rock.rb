@@ -1,7 +1,7 @@
 require "google/cloud/vision"
 require 'googleauth'
 
-export GOOGLE_APPLICATION_CREDENTIALS=Rails.root.join('gneiss-rocks-creds.json')
+GOOGLE_APPLICATION_CREDENTIALS=Rails.root.join('gneiss-rocks-creds.json')
 
 # scopes =  ['https://www.googleapis.com/auth/cloud-platform',
 #            'https://www.googleapis.com/auth/cloud-vision']
