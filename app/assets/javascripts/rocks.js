@@ -24,3 +24,17 @@ Rock.prototype.toHML= function () {
 Rock.getAllRocks = function () {
   return $.getJSON(`${API}/api/v1/rocks`)
 }
+
+Rock.allFoodsToHTML = function () {
+  return this.getAllRocks ()
+  .then(function (rocks) {
+    return rocks.map(function (rock) {
+      return new Rock (rock)
+    })
+  })
+  .then(function (rocks) {
+    return rocks.reverse().map(function (rock) {
+      return rock.toHTML ()
+    })
+  })
+}
