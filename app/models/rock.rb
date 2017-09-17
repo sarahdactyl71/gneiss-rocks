@@ -1,9 +1,9 @@
 require "google/cloud/vision"
 require 'googleauth'
 
-# scopes =  ['https://www.googleapis.com/auth/cloud-platform',
-#            'https://www.googleapis.com/auth/compute']
-# authorization = Google::Auth.get_application_default(scopes)
+scopes =  ['https://www.googleapis.com/auth/cloud-platform',
+           'https://www.googleapis.com/auth/compute']
+authorization = Google::Auth.get_application_default(scopes)
 
 class Rock < ApplicationRecord
   has_attached_file :image,
