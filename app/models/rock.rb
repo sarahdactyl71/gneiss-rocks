@@ -1,14 +1,14 @@
 require "google/cloud/vision"
 require 'googleauth'
 
-scopes =  ['https://www.googleapis.com/auth/cloud-platform',
-           'https://www.googleapis.com/auth/cloud-vision']
-
-authorizer = Google::Auth::ServiceAccountCredentials.make_creds(
-  json_key_io: File.open('/google_creds.json'),
-  scope: scopes)
-
-authorizer.fetch_access_token!
+# scopes =  ['https://www.googleapis.com/auth/cloud-platform',
+#            'https://www.googleapis.com/auth/cloud-vision']
+#
+# authorizer = Google::Auth::ServiceAccountCredentials.make_creds(
+#   json_key_io: File.open('/google_creds.json'),
+#   scope: scopes)
+#
+# authorizer.fetch_access_token!
 
 # scopes =  ['https://www.googleapis.com/auth/cloud-platform',
 #            'https://www.googleapis.com/auth/cloud-vision']
