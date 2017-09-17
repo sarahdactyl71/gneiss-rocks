@@ -1,6 +1,13 @@
 require "google/cloud/vision"
 require 'googleauth'
 
+scope = 'https://www.googleapis.com/auth/cloud-vision'
+
+authorizer = Google::Auth::ServiceAccountCredentials.make_creds(
+  json_key_io: File.open('/path/to/service_account_json_key.json'),
+  scope: scope)
+
+authorizer.fetch_access_token!
 
 # scopes =  ['https://www.googleapis.com/auth/cloud-platform',
 #            'https://www.googleapis.com/auth/cloud-vision']
