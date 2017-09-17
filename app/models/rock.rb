@@ -4,7 +4,7 @@ require 'googleauth'
 scope = 'https://www.googleapis.com/auth/cloud-vision'
 
 authorizer = Google::Auth::ServiceAccountCredentials.make_creds(
-  json_key_io: File.open('/path/to/service_account_json_key.json'),
+  json_key_io: File.open('/google_creds.json'),
   scope: scope)
 
 authorizer.fetch_access_token!
