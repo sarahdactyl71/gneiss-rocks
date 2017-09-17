@@ -29,6 +29,13 @@ class RocksController < ApplicationController
     @label_info = @rock.detect_labels(image_path)
   end
 
+  def destroy
+    @rock = Rock.find(params[:id])
+    @rock.destroy
+    flash[:notice] = "Rock was successfully destroyed."
+    redirect_to root_path
+  end
+
   private
 
   def rock_params

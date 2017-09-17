@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gneiss-rocks",
+  "private_key_id": "c50457f8c5d41a802abdae93086d6e9eda24d84b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCys8JqX+QhgMC2\n/ix+6fQsYa4jqbRSnh7zUGoWhFBBtrqI9Gi+X+GmmD9RI+u27DvbNsNQTSiRmHd5\nGK92VWOfIRkO3L6ZdJwQQvf1XP8MNx1IarqZU6YKYVTwbsHd73IJSGv3fNS8EDjL\nUk0mU7tfP5rmL1Sl7OeaWjUuFLaNm8uYOnzWziRjomrwpbita5XTNUIY4LyeaO7D\n4Ovm/k7QpCQM1XPm6+A1c//fSzrrrQnR3Ol7iW1r/KvPIAaxGXligM6eJ0Og/Zc7\n5yPbGwpNY9Qvb5rRlhP2pcgkCsHg5zGQHl0j6h2AI2dSwsz3DMZnTc71GFZzl0j4\nrPQiTQfBAgMBAAECggEAD3QU2AzYji6ji7eVerip10QvslEQwVO/7q/Zqr6Qr6wY\n+7KyE6N4QKc6E37ZGZGaeAGneHxhqZyPGVthggjOk4Jh17uOZngTbmMSLQdYnXJv\nL3XeUtfNXCiwVxXm4TW9jXC0OHvUrDo1ZRzGA+5Z/dnC4AzAA9TFrv8Fygk7w6lM\nN2RJzM0m2wU0bt1WRiHcJV0etu1Jxn+AMvcZffyoD+a8p8gm57jWGWX2YHssRdTn\nvkIvV2UzdAqz2LG+rN6c5wqhxh1udEExDq8zbjSqbMwi5FbfG17WdqasJcBaiLs4\nZex9qON0uJNFnbFNXv06OWr3cHeBJZ8bMa0IoDp/aQKBgQDekidQz9hJBvmstDfe\nbX8w3XX9WG6K9HOhZyzZNSvfMgvzplkSN4R3OQcY/Ti5Ef76eRFCgvWdj/N3WNfa\nsZ/VFATMlhXRaA5YWm/6xTHhS30o2f25dqo+e0AQD7IJw8Jhzwbs/I/8Sga+bUYW\nlEjoTRhg46B9BGULoridWu8caQKBgQDNitq0l2s55wDcuSUU7B6t9QpmqtIGq8Ia\ne/+6/dZ6AZWJ0h6kx+R/BkIxFZlB3CgBqftmH+ni2qsLthk5AfPCmRI4dmZgIPQc\nJ9XpkvB0e+Be5QC1DHB9vmy5V5D7xqFTIIlwmX5XKqCpsEM/I3tjErUW0uRlNbR2\n0G41ID8FmQKBgDRbm2YWTuH3AxsOlin8BjS/lDcR64dCtETe2Z0LNhPeWRNrKX7w\nknfdcX7+aq6Wvi2790R3PEJhj7ueqcCnklr0x6A9GkrVuLIuLDOI2hAOyxWmGlrb\nwHbMVaixmIdVhs+tfQqY62JFI8r+N8OuBGypXjfEtIdUVlTjZZyWvLMpAoGAHDOR\nDnY4IBmx5JcCn3xGOVgFtVB6wK+QUlHxJJbvdo4BFofd7H4Au+z/5/wuqvqqApBw\nDfMTBC08ir7RdyDtcSXPei/EnCvpUnOkxgeDNnhIsLx6/FxYkugtwsBhBCqct+se\n8HQfAZa3tJCaqW8U3uMSNa955ukXebXfaSqjewECgYEAzMI1EdtX9FY86b5wKvGn\n5D6BD7JMAOLqhxbuWjCacxsNySVTLUww4eSdEusNQgl+izg9wXdRNn0eZ6qqxgWw\ny9op4+4lMZ14RM0gMmafP/I6pdFtnXHcRhqi+cQKdaAiO09XOlbHDgiE47qfLAZz\njpjnruu4uNTZua1ju5xDHNo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gneiss-rocks@gneiss-rocks.iam.gserviceaccount.com",
+  "client_id": "100666559416989347184",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gneiss-rocks%40gneiss-rocks.iam.gserviceaccount.com"
+}
