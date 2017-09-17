@@ -1,7 +1,7 @@
 require "google/cloud/vision"
 require 'googleauth'
 
-GOOGLE_APPLICATION_CREDENTIALS='../gneiss-rocks-creds.json'
+GOOGLE_APPLICATION_CREDENTIALS='gneiss-rocks-creds.json'
 
 class Rock < ApplicationRecord
   has_attached_file :image,
