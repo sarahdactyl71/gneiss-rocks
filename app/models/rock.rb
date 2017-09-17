@@ -1,9 +1,12 @@
 require "google/cloud/vision"
 require 'googleauth'
+require 'base64'
 
 scopes =  ['https://www.googleapis.com/auth/cloud-platform',
            'https://www.googleapis.com/auth/compute']
-authorization = Google::Auth.get_application_default(scopes)
+# authorization = Google::Auth.get_application_default(scopes)
+cred_io = StringIO.new(Base64.decode64(ENV['GOOGLE_CREDENTIALS_JSON']))
+authorization = Google::Auth::ServiceAccountCredentials.make_creds(json_key_io: cred_io, scope: scopes)
 
 class Rock < ApplicationRecord
   has_attached_file :image,
