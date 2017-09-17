@@ -7,3 +7,7 @@ function Rock (rock) {
   this.description = rock.description
   this.public_url = rock.public_url
 }
+
+Rock.getAllRocks = function () {
+  return $.getJSON(`${API}/api/v1/rocks`)
+}
