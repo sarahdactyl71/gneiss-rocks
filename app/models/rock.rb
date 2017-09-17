@@ -3,19 +3,6 @@ require 'googleauth'
 
 GOOGLE_APPLICATION_CREDENTIALS=Rails.root.join('gneiss-rocks-creds.json')
 
-# scopes =  ['https://www.googleapis.com/auth/cloud-platform',
-#            'https://www.googleapis.com/auth/cloud-vision']
-#
-# authorizer = Google::Auth::ServiceAccountCredentials.make_creds(
-#   json_key_io: File.open('/gneiss-rocks/google_creds.json'),
-#   scope: scopes)
-#
-# authorizer.fetch_access_token!
-
-# scopes =  ['https://www.googleapis.com/auth/cloud-platform',
-#            'https://www.googleapis.com/auth/cloud-vision']
-# authorization = Google::Auth.get_application_default(scopes)
-
 class Rock < ApplicationRecord
   has_attached_file :image,
                     styles: {
