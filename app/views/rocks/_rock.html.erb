@@ -1,6 +1,6 @@
 <div class="media">
   <div class="media-left">
-    <%= link_to image_tag(rock.image.path, class: 'media-object'), rock.image.path, target: '_blank' %>
+    <%= link_to image_tag(rock.public_url, class: 'media-object'), rock.public_url, target: '_blank' %>
   </div>
   <div class="media-body">
     <h4 class="media-heading"><%= rock.location_found %></h4>
