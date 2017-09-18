@@ -5,7 +5,6 @@
   <div class="media-body">
     <h4 class="media-heading"><%= rock.location_found %></h4>
     <p class="media-heading"><%= rock.description %></p>
-    <!-- <%= link_to "Delete", rock, method: :delete, data: { confirm: "You sure?" } %> -->
     <%= button_to "Delete", rock, method: :delete, data: { confirm: "Are you sure?" }%>
     <%= link_to("What Is This Rock?", rock_path(rock.id), class: "btn") %>
   </div>
