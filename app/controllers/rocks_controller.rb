@@ -23,7 +23,6 @@ class RocksController < ApplicationController
 
   def show
     @rock = Rock.find(params[:id])
-    # image_path = @rock.image.path
     image_path = @rock.public_url
     @web_info = @rock.web_detection(image_path)
     @label_info = @rock.detect_labels(image_path)
@@ -39,6 +38,6 @@ class RocksController < ApplicationController
   private
 
   def rock_params
-    params.require(:rock).permit(:location_found, :description, :image, :image_file_name, :image_file_size, :image_content_type, :image_updated_at)
+    params.require(:rock).permit(:location_found, :description, :image, :image_file_name, :image_file_size, :image_content_type, :image_updated_at, :public_url)
   end
 end
