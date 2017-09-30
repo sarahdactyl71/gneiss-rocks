@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+// body {
+//   background-color: #F8EEE7;
+// }
+
 .media-object {
   height: 250px;
   width: 250px;
@@ -29,7 +33,8 @@
 }
 
 .media:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  // background-color: #F4DECB;
 }
 
 .media-body {
@@ -38,30 +43,29 @@
 }
 
 .main-nav {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .nav-order {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    height: 100%;
     overflow: hidden;
-    background-color: #333;
+    background-color: #94618E;
 }
 
 .nav-link {
     float: left;
+    height: 100%;
 }
 
 .nav-link a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 .nav-link a:hover {
-    background-color: #111;
+    background-color: 49274A;
+    color: 49274A;
 }
