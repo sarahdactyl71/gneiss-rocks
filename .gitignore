@@ -21,3 +21,6 @@
 # Ignore application configuration
 /config/application.yml
 /config/gneiss_rocks_credentials.json
+
+# Ignore google credential files
+.gneiss-rocks-creds.json
