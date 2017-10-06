@@ -9,20 +9,25 @@ Sadly, it is not always the case for one to have the friendly neightborhood geol
 
 For development, you will only need quite a few things installed on your environment to get going.
 
--Rails 5.1.3
--Ruby 2.4.1
--Python 2.7x
--Google SDK
-The [docs](https://cloud.google.com/sdk/docs/) for Google Cloud SDK are pretty comprehensive and I suggest you start there for getting everything set up on your machine.
+* Rails 5.1.3
+* Ruby 2.4.1
+* Python 2.7x
+* Google SDK
 
-Things you may want to cover:
+The [docs](https://cloud.google.com/sdk/docs/) for Google Cloud SDK are pretty comprehensive and I suggest you start there for getting everything set up on your machine.
 
 
 ## Install
 
+```
 $ git clone git@github.com:sarahdactyl71/gneiss-rocks.git
+```
+```
 $ cd gneiss-rocks
+```
+```
 $ bundle install
+```
 
 Please note this is assuming everything was installed and set up properly with Google SDK.
 
@@ -34,7 +39,7 @@ Please note this is assuming everything was installed and set up properly with G
 
 * Database initialization
 
-## Testing 
+## Testing
   `rspec`
 
   If you would like to see the test coverage run all the tests and then paste
@@ -42,9 +47,3 @@ Please note this is assuming everything was installed and set up properly with G
   `open coverage/index.html`
 
   into your terminal. This should open a file in your browser with and in depth look at what the tests are covering.
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
