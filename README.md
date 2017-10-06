@@ -31,13 +31,12 @@ $ bundle install
 
 Please note this is assuming everything was installed and set up properly with Google SDK.
 
-* System dependencies
+You wil need a set of application credentials for the project specific to your google user account. They should be a JSON file with a lot of private information such as your private key, project name, client id etc. You will need to set a file up in your root directory called
 
-* Configuration
-
-* Database creation
-
-* Database initialization
+```
+gneiss-rocks-creds.json
+```
+with the JSON file you created in your google account in it. This will give you the proper permissions to access the Google Vision API.
 
 ## Testing
   `rspec`
