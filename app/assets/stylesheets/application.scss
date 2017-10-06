@@ -1,11 +1,21 @@
 @import "bootstrap";
 
+// body {
+//   background-color: #F8EEE7;
+// }
+
 .media-object {
   height: 250px;
   width: 250px;
-  // border-radius:15px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  margin-right: 15px;
+}
+
+.media-show {
+  height: 250px;
+  width: 250px;
+  border-radius:15px;
   margin-right: 15px;
 }
 
@@ -23,10 +33,39 @@
 }
 
 .media:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  // background-color: #F4DECB;
 }
 
 .media-body {
   float: left;
   margin: 5px;
+}
+
+.main-nav {
+  margin-bottom: 20px;
+}
+
+.nav-order {
+    list-style-type: none;
+    height: 100%;
+    overflow: hidden;
+    background-color: #94618E;
+}
+
+.nav-link {
+    float: left;
+    height: 100%;
+}
+
+.nav-link a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-link a:hover {
+    background-color: 49274A;
+    color: 49274A;
 }
